@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import logoWhite from "../../assets/logo/logo-white.svg";
 import { Link } from "react-router-dom";
+import television from "../../assets/images/tv.jpg";
 import "./Signup.scss";
 
 function Signup() {
@@ -32,42 +33,47 @@ function Signup() {
   }
 
   return (
-    <div className="auth">
-      <img className="auth-logo" src={logoWhite} alt="logo-white" />
-      <h1 className="auth__title">HEY, COUNT ME IN</h1>
-      <div className="auth__sign-in">
-        <p className="auth__sign-in--tag">
-          Already have an account? <Link to="/login">Log In</Link>
-        </p>
+    <div className="wrapper">
+      <div className="wrapper__img">
+        <img src={television} alt="televisions" />
       </div>
+      <div className="auth">
+        <img className="auth-logo" src={logoWhite} alt="logo-white" />
+        <h1 className="auth__title">HEY, COUNT ME IN</h1>
+        <div className="auth__sign-in">
+          <p className="auth__sign-in--tag">
+            Already have an account? <Link to="/login">Log In</Link>
+          </p>
+        </div>
 
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit} className="sign-up">
-        <input
-          className="sign-up__field"
-          type="email"
-          placeholder="Email"
-          ref={emailRef}
-          required
-        ></input>
-        <input
-          className="sign-up__field"
-          type="password"
-          placeholder="Password"
-          ref={passwordRef}
-          required
-        ></input>
-        <input
-          className="sign-up__field"
-          type="password"
-          placeholder="Confirm Password"
-          ref={passwordConfirmRef}
-          required
-        ></input>
-        <button disabled={loading} className="sign-up__btn" type="submit">
-          Sign Up
-        </button>
-      </form>
+        {error && <p>{error}</p>}
+        <form onSubmit={handleSubmit} className="sign-up">
+          <input
+            className="sign-up__field"
+            type="email"
+            placeholder="Email"
+            ref={emailRef}
+            required
+          ></input>
+          <input
+            className="sign-up__field"
+            type="password"
+            placeholder="Password"
+            ref={passwordRef}
+            required
+          ></input>
+          <input
+            className="sign-up__field"
+            type="password"
+            placeholder="Confirm Password"
+            ref={passwordConfirmRef}
+            required
+          ></input>
+          <button disabled={loading} className="sign-up__btn" type="submit">
+            Sign Up
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
