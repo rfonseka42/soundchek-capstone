@@ -1,0 +1,18 @@
+@use "./styles/partials/fonts";
+@use "./styles/partials/colors";
+@use "./styles/partials/breakpoints";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Sigmar One', regular;
+ 
+    margin: 0;
+}
+

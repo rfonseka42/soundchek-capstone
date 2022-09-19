@@ -1,0 +1,72 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.auth{
+    background-color: $background;
+    height: 100vh;
+    padding-top: 1.5rem;
+
+   
+    
+
+    &__title{
+        color: $main-copy;
+        text-align: center;
+        margin-top: 0;
+        padding: 2rem .5rem .5rem .5rem;
+
+    }
+    &__sign-in{
+        color: $button;
+        font-family: 'Open Sans';
+        text-align: center;
+    }
+}
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+   
+   
+
+    &__field{
+        min-width: 65%;
+        height: 2rem;
+        margin-bottom: 1.5rem;
+        background-color: $background;
+        border: none;
+        border-bottom: 1px solid $button-hover;
+    }
+    
+    ::placeholder{
+        color: $main-copy;
+    }
+
+    &__btn{
+        width: 12.75rem;
+        height: 3rem;
+        border-radius: 10px;
+        border: none;
+        background-color: $button;
+        color: $main-copy;
+        font-family: 'Open Sans';
+        margin-top: 1.5rem;
+      
+    
+
+       
+    }  
+}
+
+.auth-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8rem;
+
+    @include tablet{
+        display: none;
+    }
+}
