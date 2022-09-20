@@ -1,0 +1,40 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.hero{
+    background-color: $background;
+
+    @include tablet{
+        display: flex;
+    }
+    &__title{
+        
+        &--tagline{
+            margin-top: 0;
+            color: $main-copy;
+            font-size: 2rem;
+            font-weight: 400;
+            padding: 2rem 1rem 0 2rem;
+            line-height: 2.1875rem;
+        }
+    }
+
+    &__body{
+        color: $main-copy;
+        font-family: 'Open Sans';
+        font-size: 1rem;
+        line-height: 1.5625rem;
+        padding: 0 2rem 2rem 2rem;
+
+    }
+
+    &__guitar{
+        display: none;
+
+        @include tablet{
+            display: flex;
+            width: 25rem;
+            
+        }
+    }
+}
