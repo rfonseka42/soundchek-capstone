@@ -1,0 +1,73 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: $background;
+    
+    @include tablet{
+        display: flex;
+    }
+
+    &__logo{
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+    }
+    &__navigation{
+        display: none;
+        
+
+        @include tablet{
+            display: flex;
+            gap: 2rem;
+            color: $main-copy;
+            font-family: 'Open Sans';
+            font-size: 1rem;
+        }
+    }
+
+}
+
+.dropdown__skull{
+    color: $button;
+    width: 2rem;
+    height: 1.875rem;
+    margin-top: 1rem;
+
+}
+
+.dropdown-menu{
+
+    &__list{
+        color: $main-copy;
+        font-family: 'Open Sans';
+        list-style: none;
+    
+    }
+    
+}
+
+.dropdown-menu.active{
+
+    @include tablet{
+   
+    visibility: visible;
+   
+    }
+}
+
+.dropdown-menu.inactive{
+
+    @include tablet{
+    
+    visibility: hidden;
+    
+    }
+}
+
+
+
