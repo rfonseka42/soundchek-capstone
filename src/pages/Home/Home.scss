@@ -1,0 +1,12 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.card{
+
+    &__img{
+        width:3px;
+        height: 3px;
+    }
+
+
+}
