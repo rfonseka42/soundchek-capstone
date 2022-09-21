@@ -3,6 +3,8 @@ import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
+import Footer from "../../components/Footer/Footer";
+import "./Home.scss";
 
 function Home() {
   const [rehearsalRooms, setRehearsalRooms] = useState([]);
@@ -50,6 +52,7 @@ function Home() {
           );
         })}
       </div>
+      <Footer />
     </>
   );
 }

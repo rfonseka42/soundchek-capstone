@@ -1,0 +1,108 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.footer-top{
+    background-color: $button-hover;
+    height: .8125rem;
+}
+
+.footer-mid{
+    background-color: $button;
+    height: .8125rem;
+}
+
+.footer{
+    background-color: $footer-background;
+
+    @include tablet{
+        display: flex;
+        padding-bottom: 2rem;
+        justify-content: space-between;
+        padding: 0 2rem 0 2rem;
+
+    }
+
+    @include desktop{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    &__logo{
+        display: grid;
+        place-items: center;
+        padding-top: 2.5rem;
+
+        @include tablet{
+            margin-top: -3rem;
+            
+        }
+
+        @include desktop{
+            padding-top: 3rem;
+        }
+    
+    }
+
+    &__img{
+        height: 4.5rem;
+        width: 5rem;
+        
+    }
+
+    &__about{
+        text-align: center;
+        color: $main-copy;
+        font-family: 'Open sans';
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        padding-top: 1.5rem;
+
+        @include tablet{
+            display: flex;
+            align-items: center;
+            order: -1;
+            gap: 3rem;
+            margin-top: -1.5rem;
+
+        }
+
+        @include desktop{
+            gap: 7rem;
+        }
+
+    }
+
+    &__contact{
+        text-align: center;
+        color: $main-copy;
+        font-family: 'Open sans';
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        padding-top: .5rem;
+
+        @include tablet{
+            display: flex;
+            align-items: center;
+            margin-top: -1.5rem;
+
+        }
+    }
+
+   
+    &__socials{
+       display: flex;
+       justify-content: center;
+       gap: 2rem;
+       color: $main-copy;
+       padding-top: 2rem;
+       padding-bottom: 3rem;
+
+        @include desktop{
+            gap: 3rem;
+        }
+    }
+
+
+}
