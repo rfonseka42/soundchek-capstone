@@ -5,12 +5,16 @@ import Home from "./pages/Home/Home";
 import Login from "./components/Login/Login";
 import "./App.scss";
 import ProtectedRoute from "./components/ProtectedRoute";
+import RoomDetails from "./pages/RoomDetails/RoomDetails";
+import Payment from "./pages/Payment/Payment";
 
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
         <Routes>
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
           <Route
             exact
             path="/"
@@ -20,8 +24,24 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
+          <Route
+            exact
+            path="/roomDetails/:id"
+            element={
+              <ProtectedRoute>
+                <RoomDetails />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            exact
+            path="/payment"
+            element={
+              <ProtectedRoute>
+                <Payment />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </AuthProvider>
     </BrowserRouter>

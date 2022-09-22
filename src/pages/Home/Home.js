@@ -4,13 +4,24 @@ import Hero from "../../components/Hero/Hero";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Footer from "../../components/Footer/Footer";
+import { Link } from "react-router-dom";
 import "./Home.scss";
 
 function Home() {
   const [rehearsalRooms, setRehearsalRooms] = useState([]);
-  const rehearsalRoomsCollectionRef = collection(db, "rehearsalRooms");
+  const [selectedRoom, setSelectedRoom] = useState([]);
+
+  const selectRoom = (id) => {
+    let foundRoom = rehearsalRooms.find((rehearsalRoom) => {
+      return id === rehearsalRoom.id;
+    });
+
+    console.log(foundRoom);
+    setSelectedRoom(foundRoom);
+  };
 
   useEffect(() => {
+    const rehearsalRoomsCollectionRef = collection(db, "rehearsalRooms");
     const getRehearsalRooms = async () => {
       const data = await getDocs(rehearsalRoomsCollectionRef);
       setRehearsalRooms(
@@ -25,30 +36,38 @@ function Home() {
     <>
       <Header />
       <Hero />
-      <h2>Room Details Page</h2>
+
       <div className="card-wrap">
         {rehearsalRooms.map((rehearsalRoom) => {
           return (
-            <div className="card" key={rehearsalRoom.id}>
-              <div className="card__top">
-                <img
-                  className="card__img"
-                  src={rehearsalRoom.imgUrl}
-                  alt="room"
-                />
-              </div>
-              <div className="card__bottom">
-                <div className="card__bottom--left">
-                  <p>{rehearsalRoom.name}</p>
-                  <p>{rehearsalRoom.address}</p>
-                  <p>{rehearsalRoom.company}</p>
-                  <p>${rehearsalRoom.price}/Hr</p>
+            <Link to={`/roomDetails/${rehearsalRoom.id}`}>
+              <div className="card" key={rehearsalRoom.id}>
+                <div className="card__top">
+                  <img
+                    className="card__img"
+                    src={rehearsalRoom.imgUrl}
+                    alt="room"
+                  />
                 </div>
-                <div className="card__bottom--right">
-                  <p>{rehearsalRoom.people}</p>
+                <div className="card__bottom">
+                  <div className="card__bottom--left">
+                    <p className="card__bottom--bold">{rehearsalRoom.name}</p>
+                    <p className="card__bottom--item">
+                      {rehearsalRoom.address}
+                    </p>
+                    <p className="card__bottom--item">
+                      {rehearsalRoom.company}
+                    </p>
+                    <p className="card__bottom--bold">
+                      ${rehearsalRoom.price}/Hr
+                    </p>
+                  </div>
+                  <div className="card__bottom--right">
+                    <p className="card__bottom--bold">{rehearsalRoom.people}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
