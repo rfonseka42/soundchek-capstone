@@ -42,7 +42,7 @@ function Reservations() {
   };
 
   if (!singleRoom) {
-    return <p>loading...</p>;
+    return <p>You have no Upcoming Reservations</p>;
   }
 
   if (singleRoom) {
