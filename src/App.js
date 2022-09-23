@@ -35,7 +35,7 @@ function App() {
           />
           <Route
             exact
-            path="/payment"
+            path="/payment/:id"
             element={
               <ProtectedRoute>
                 <Payment />

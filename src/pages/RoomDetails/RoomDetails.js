@@ -1,18 +1,10 @@
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import "./RoomDetails.scss";
-import drummer from "../../assets/images/placeholder.png";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import {
-  doc,
-  getDocs,
-  onSnapshot,
-  snapshot,
-  collection,
-} from "firebase/firestore";
+import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../firebase";
-import { FirebaseError } from "firebase/app";
 
 function RoomDetails() {
   const [rooms, setRooms] = useState([]);
@@ -108,25 +100,20 @@ function RoomDetails() {
             <div className="room-image">
               <img
                 className="room-image__placeholder"
-                src={drummer}
+                src={singleRoom.imgUrl}
                 alt="drummer"
               />
             </div>
           </div>
           <div className="room-right">
-            <p className="room-right__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Elementum integer enim neque volutpat ac tincidunt vitae. Pulvinar
-              pellentesque habitant morbi tristique senectus et netus. Turpis
-              tincidunt id aliquet risus feugiat. Quam id leo in vitae turpis
-              massa sed elementum tempus.
-            </p>
+            <p className="room-right__description">{singleRoom.description}</p>
             <p className="room-right__time">Time Picker</p>
             <div className="room-right__cta">
-              <button className="room-right__cta room-right__cta--book">
-                <Link to="/payment">Book</Link>
-              </button>
+              <Link to={`/Payment/${singleRoom.id}`}>
+                <button className="room-right__cta room-right__cta--book">
+                  Book
+                </button>
+              </Link>
               <a className="room-right__cta room-right__cta--home" href="/">
                 Find another room
               </a>

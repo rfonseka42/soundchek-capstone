@@ -1,2 +1,62 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/breakpoints" as *;
+
+.payment-wrapper{
+    background-color: $background;
+
+     
+    &__title{
+        color: $main-copy;
+        margin-top: 0;
+        font-size: 1.5rem;
+    
+    }
+}
+
+.pay-container{
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        padding-left: 2rem;
+    }
+}
+
+.room-confirm{
+
+    font-family: "Open sans";
+    color: $main-copy;
+
+    &__img{
+        width: 100%;
+    }
+
+    &__title{
+        color: $main-copy;
+        font-family: "Sigmar One";
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+}
+
+.pay-details{
+    color: $main-copy;
+
+    &__subheading{
+        font-family: "Open sans";
+    }
+}
+
+.credit-container{
+    font-family: "Open sans";
+    
+    &__label{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__field{
+        width: 70%;
+        height: 2rem;
+    }
+}
