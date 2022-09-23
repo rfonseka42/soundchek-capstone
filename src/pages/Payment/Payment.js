@@ -100,7 +100,9 @@ function Payment() {
                   </label>
                 </div>
                 <p>Total</p>
-                <button>Pay $</button>
+                <Link to={`/yourReservation/${singleRoom.id}`}>
+                  <button>Pay $</button>
+                </Link>
               </form>
               <button
                 className="open-modal"

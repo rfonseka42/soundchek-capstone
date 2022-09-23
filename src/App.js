@@ -7,6 +7,7 @@ import "./App.scss";
 import ProtectedRoute from "./components/ProtectedRoute";
 import RoomDetails from "./pages/RoomDetails/RoomDetails";
 import Payment from "./pages/Payment/Payment";
+import Reservations from "./pages/Reservations/Reservations";
 
 function App() {
   return (
@@ -39,6 +40,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <Payment />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            exact
+            path="/yourReservation/:id"
+            element={
+              <ProtectedRoute>
+                <Reservations />
               </ProtectedRoute>
             }
           />
