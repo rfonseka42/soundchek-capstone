@@ -1,2 +1,21 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/breakpoints" as *;
+
+.room-confirm{
+
+    background-color: $background;
+
+    font-family: "Open sans";
+    color: $main-copy;
+
+    &__img{
+        width: 100%;
+    }
+
+    &__title{
+        color: $main-copy;
+        font-family: "Sigmar One";
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+}

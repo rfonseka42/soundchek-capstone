@@ -77,7 +77,7 @@ function RoomDetails() {
   //   return <p></p>;
   // }
   if (!singleRoom) {
-    return <p></p>;
+    return <p>Loading...</p>;
   }
   // if (singleRoom[0].price) {
   //   console.log(singleRoom[0].price);

@@ -36,7 +36,7 @@ function Payment() {
   }, [singleRoom, rooms]);
 
   if (!singleRoom) {
-    return <p></p>;
+    return <p>loading...</p>;
   }
 
   if (singleRoom) {
