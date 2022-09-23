@@ -4,9 +4,12 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../firebase";
+import PaymentModal from "../../components/Modals/PaymentModal/PaymentModal";
 import "./Payment.scss";
 
 function Payment() {
+  const [modalState, setModalState] = useState(false);
+
   const [rooms, setRooms] = useState([]);
   const [singleRoom, setSingleRoom] = useState([]);
   let { id } = useParams();
@@ -99,9 +102,17 @@ function Payment() {
                 <p>Total</p>
                 <button>Pay $</button>
               </form>
-              <button>Cancel</button>
+              <button
+                className="open-modal"
+                onClick={() => {
+                  setModalState(true);
+                }}
+              >
+                Cancel
+              </button>
             </div>
           </div>
+          {modalState && <PaymentModal setOpenModal={setModalState} />}
         </div>
         <Footer />
       </>
