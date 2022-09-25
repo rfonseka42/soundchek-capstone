@@ -40,11 +40,12 @@ function Home() {
       <div className="card-wrap">
         {rehearsalRooms.map((rehearsalRoom) => {
           return (
-            <Link to={`/roomDetails/${rehearsalRoom.id}`}>
+            <Link to={`/roomDetails/${rehearsalRoom.id}`} className="card-link">
               <div className="card" key={rehearsalRoom.id}>
-                <div className="card__top">
+                <div className="card-top">
+                  <div className="card-top__outline"></div>
                   <img
-                    className="card__img"
+                    className="card-top__img"
                     src={rehearsalRoom.imgUrl}
                     alt="room"
                   />
@@ -53,10 +54,10 @@ function Home() {
                   <div className="card__bottom--left">
                     <p className="card__bottom--bold">{rehearsalRoom.name}</p>
                     <p className="card__bottom--item">
-                      {rehearsalRoom.address}
+                      {rehearsalRoom.company}
                     </p>
                     <p className="card__bottom--item">
-                      {rehearsalRoom.company}
+                      {rehearsalRoom.address}
                     </p>
                     <p className="card__bottom--bold">
                       ${rehearsalRoom.price}/Hr

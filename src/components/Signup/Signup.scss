@@ -4,8 +4,10 @@
 
 .wrapper{
 
+height: 100vh;
+
     @include tablet{
-        display: flex;
+        display: flex; 
     }
 
     &__img{
@@ -13,18 +15,49 @@
 
         @include tablet{
             display: flex;
-            width: 60vw;
+            height: 100vh;
+            width: 50%;
         }
     }
 
+    &__one{
+        display: none;
+        @include tablet{
+            display: flex;
+            background-color: $button;
+            width: .75rem;
+            height: 100vh;
+        }
+    }
 
-
+    &__two{
+        display: none;
+        @include tablet{
+            display: flex;
+            background-color: $button-hover;
+            width: .75rem;
+            height: 100vh;
+        }
+    }
 }
 
 .auth{
     background-color: $background;
-    height: 110vh;
+    height: 100%;
     padding-top: 1.5rem;
+    
+
+    @include tablet{
+        width: 60%;
+        height: 100vh;
+        padding-top: 4rem;
+        
+    }
+
+    @include desktop{
+        width: 70%;
+        padding-top: 6rem;
+    }
     
 
     &__title{
@@ -32,12 +65,21 @@
         text-align: center;
         margin-top: 0;
         padding: 2rem .5rem .5rem .5rem;
+        font-size: 1.5rem;
+
+        @include desktop{
+            font-size: 2rem;
+        }
 
     }
     &__sign-in{
         color: $button;
         font-family: 'Open Sans';
         text-align: center;
+
+        &--login:visited{
+            color: $main-copy;
+        }
     }
 }
 
@@ -46,9 +88,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 3rem;
-   
-   
-   
 
     &__field{
         min-width: 65%;
@@ -57,11 +96,18 @@
         background-color: $background;
         border: none;
         border-bottom: 1px solid $button-hover;
+        color: $main-copy;
+
+        @include desktop{
+            min-width: 50%;
+        }
+
     }
     
     ::placeholder{
         color: $main-copy;
     }
+
 
     &__btn{
         width: 12.75rem;
@@ -72,10 +118,8 @@
         color: $main-copy;
         font-family: 'Open Sans';
         margin-top: 1.5rem;
+        margin-bottom: 2rem;
       
-    
-
-       
     }  
 }
 
@@ -86,6 +130,10 @@
     width: 8rem;
 
     @include tablet{
-        display: none;
+      position: absolute;
+      width: 7rem;
+      left: 29px;
+      top: 1.5rem;
+      
     }
 }

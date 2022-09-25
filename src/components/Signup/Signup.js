@@ -37,12 +37,17 @@ function Signup() {
       <div className="wrapper__img">
         <img src={television} alt="televisions" />
       </div>
+      <div className="wrapper__one"></div>
+      <div className="wrapper__two"></div>
       <div className="auth">
         <img className="auth-logo" src={logoWhite} alt="logo-white" />
         <h1 className="auth__title">HEY, COUNT ME IN</h1>
         <div className="auth__sign-in">
           <p className="auth__sign-in--tag">
-            Already have an account? <Link to="/login">Log In</Link>
+            Already have an account?{" "}
+            <Link className="auth__sign-in--login" to="/login">
+              Log In
+            </Link>
           </p>
         </div>
 
@@ -55,6 +60,7 @@ function Signup() {
             ref={emailRef}
             required
           ></input>
+
           <input
             className="sign-up__field"
             type="password"

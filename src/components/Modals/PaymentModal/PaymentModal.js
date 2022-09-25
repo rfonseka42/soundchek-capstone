@@ -5,9 +5,10 @@ import React from "react";
 function PaymentModal({ setOpenModal }) {
   return (
     <div className="modal-background">
-      <div className="modalContainer">
-        <div className="titleCloseBtn">
+      <div className="modal-container">
+        <div className="modal__x">
           <button
+            className="modal__x--btn"
             onClick={() => {
               setOpenModal(false);
             }}
@@ -15,15 +16,18 @@ function PaymentModal({ setOpenModal }) {
             X
           </button>
         </div>
-        <div className="title">
+        <div className="modal-container__title">
           <h1>Are You Sure You Want to Cancel?</h1>
         </div>
-        <div className="footer">
-          <a href="/">
-            <button id="cancelBtn">Cancel and go Home</button>
+        <div className="modal-container__buttons">
+          <a className="modal-container__buttons--link" href="/">
+            <button className="modal-container__buttons modal-container__buttons--home ">
+              Cancel Room
+            </button>
           </a>
 
           <button
+            className="modal-container__home modal-container__buttons--book"
             onClick={() => {
               setOpenModal(false);
             }}

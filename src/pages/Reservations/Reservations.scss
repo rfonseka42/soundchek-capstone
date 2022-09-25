@@ -1,21 +1,92 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/breakpoints" as *;
 
+.noBooks{
+    background-color: $background;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    height: 100vh;
+    color: $main-copy;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-left: 3rem;
+}
+
+.reservations{
+    background-color: $background;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $main-copy;
+    padding: 1.5rem;
+
+    @include tablet{
+        padding-left: 2rem;
+    }
+
+    @include desktop{
+        padding-left: 12rem;
+    }
+}
+
 .room-confirm{
 
     background-color: $background;
-
     font-family: "Open sans";
     color: $main-copy;
 
-    &__img{
-        width: 100%;
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
     }
 
-    &__title{
-        color: $main-copy;
-        font-family: "Sigmar One";
-        margin-top: 0;
-        font-size: 1.5rem;
+    &__img{
+        width: 100%;
+       
+
+        @include tablet{
+            width: 50%;
+            padding-left: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        @include desktop{
+            padding-left: 12rem;
+            
+        }
     }
+
+    &__details{
+
+        @include tablet{
+            padding-right: 10rem;
+            margin-top: -.75rem;
+        }
+
+        @include desktop{
+            padding-right: 25rem;
+            margin-left: -7rem;
+           
+        }
+        &--light{
+            font-weight: 400;
+        }
+    }
+
+    &__btn{
+        width: 11rem;
+            height: 3rem;
+            border-radius: 10px;
+            border: none;
+            background-color: $button;
+            color: $main-copy;
+            font-family: 'Open Sans';
+            cursor: pointer;
+            margin-bottom: 2rem;
+    }
+
+    &__btn:hover{
+        background-color: $button-hover;
+    }
+
+    
 }

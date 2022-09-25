@@ -1,0 +1,138 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+
+.wrapper{
+
+height: 100vh;
+
+    @include tablet{
+        display: flex; 
+    }
+
+    &__img{
+        display: none;
+
+        @include tablet{
+            display: flex;
+            height: 100vh;
+            width: 50%;
+        }
+    }
+
+    &__one{
+        display: none;
+        @include tablet{
+            display: flex;
+            background-color: $button;
+            width: .75rem;
+            height: 100vh;
+        }
+    }
+
+    &__two{
+        display: none;
+        @include tablet{
+            display: flex;
+            background-color: $button-hover;
+            width: .75rem;
+            height: 100vh;
+        }
+    }
+}
+
+.auth{
+    background-color: $background;
+    height: 100%;
+    padding-top: 1.5rem;
+
+    @include tablet{
+        width: 60%;
+        height: 100vh;
+        padding-top: 4rem;
+        
+    }
+
+    @include desktop{
+        width: 70%;
+        padding-top: 6rem;
+    }
+    
+
+    &__title{
+        color: $main-copy;
+        text-align: center;
+        margin-top: 0;
+        padding: 2rem .5rem .5rem .5rem;
+        font-size: 1.5rem;
+
+        @include desktop{
+            font-size: 2rem;
+        }
+
+    }
+    &__sign-in{
+        color: $button;
+        font-family: 'Open Sans';
+        text-align: center;
+
+        &--tag:visited{
+            color: $main-copy;
+        }
+    }
+}
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+
+    &__field{
+        min-width: 65%;
+        height: 2rem;
+        margin-bottom: 1.5rem;
+        background-color: $background;
+        border: none;
+        border-bottom: 1px solid $button-hover;
+        color: $main-copy;
+
+        @include desktop{
+            min-width: 50%;
+        }
+
+    }
+    
+    ::placeholder{
+        color: $main-copy;
+    }
+
+
+    &__btn{
+        width: 12.75rem;
+        height: 3rem;
+        border-radius: 10px;
+        border: none;
+        background-color: $button;
+        color: $main-copy;
+        font-family: 'Open Sans';
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+      
+    }  
+}
+
+.auth-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8rem;
+
+    @include tablet{
+      position: absolute;
+      width: 7rem;
+      left: 29px;
+      top: 1.5rem;
+      
+    }
+}

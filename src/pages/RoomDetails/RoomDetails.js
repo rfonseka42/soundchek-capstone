@@ -32,56 +32,10 @@ function RoomDetails() {
     }
   }, [singleRoom, rooms]);
 
-  // useEffect(() => {
-  //   console.log("running");
-  //   const colRef = collection(db,"rehearsalRooms");
-  //   const q = query(colRef, where(""))
-  //   const docRef = doc(db, "rehearsalRooms", id);
-
-  //   onSnapshot(
-  //     docRef,
-  //     (snapshot) => {
-  //      set(snapshot.docs.map((doc) => ({
-  //         ...doc.data(),
-  //         id: doc.id,
-  //       }));)
-  //
-  //     },
-  //     []
-  //   );
-  // });
-
-  // if (docSnap.exists()) {
-  //   console.log("Document data:", docSnap.data());
-  // } else {
-  //   // doc.data() will be undefined in this case
-  //   console.log("No such document!");
-  // }
-
-  // const [rehearsalRoom, setRehearsalRooms] = useState([]);
-
-  // useEffect(() => {
-  //   const colRef = collection(db, "rehearsalRooms");
-  //   const q = query(colRef, where("rehearsalRoom", "array-contains", id));
-
-  //   onSnapshot(q, (snapshot) => {
-  //     let myRoom = [];
-  //     snapshot.docs.forEach((doc) => {
-  //      myRoom.push({...doc.data(), id: doc.id})
-  //
-  //     })
-  //
-  // }, []);
-
-  // if (!singleRoom[0]) {
-  //   return <p></p>;
-  // }
   if (!singleRoom) {
     return <p>Loading...</p>;
   }
-  // if (singleRoom[0].price) {
-  //   console.log(singleRoom[0].price);
-  // }
+
   if (singleRoom) {
     return (
       <>
@@ -93,13 +47,19 @@ function RoomDetails() {
                 <h2 className="room-details__name">{singleRoom.company}</h2>
               )}
               <div className="room-details__other">
-                <p>{singleRoom.address}</p>
-                <p>{singleRoom.people}</p>
+                <div>
+                  <p>{singleRoom.address}</p>
+                  <p>{singleRoom.people}</p>
+                </div>
+
+                <p className="room-details__other room-details__other--bold">
+                  ${singleRoom.price}/Hr
+                </p>
               </div>
             </div>
             <div className="room-image">
               <img
-                className="room-image__placeholder"
+                className="room-image__room"
                 src={singleRoom.imgUrl}
                 alt="drummer"
               />
@@ -109,7 +69,10 @@ function RoomDetails() {
             <p className="room-right__description">{singleRoom.description}</p>
             <p className="room-right__time">Time Picker</p>
             <div className="room-right__cta">
-              <Link to={`/Payment/${singleRoom.id}`}>
+              <Link
+                to={`/Payment/${singleRoom.id}`}
+                className="room-right__btn"
+              >
                 <button className="room-right__cta room-right__cta--book">
                   Book
                 </button>

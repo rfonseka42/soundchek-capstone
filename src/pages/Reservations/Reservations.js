@@ -42,14 +42,20 @@ function Reservations() {
   };
 
   if (!singleRoom) {
-    return <p>You have no Upcoming Reservations</p>;
+    return (
+      <>
+        <Header />
+        <p className="noBooks">You have no Upcoming Reservations</p>
+        <Footer />
+      </>
+    );
   }
 
   if (singleRoom) {
     return (
       <>
         <Header />
-        <h2>Your Reservations</h2>
+        <h2 className="reservations">Your Reservations</h2>
 
         <div className="room-confirm">
           <img
@@ -57,16 +63,20 @@ function Reservations() {
             src={singleRoom.imgUrl}
             alt="room-image"
           />
-          <h2 className="room-confirm__title">Room Details</h2>
-          <p>{singleRoom.company}</p>
-          <p>{singleRoom.address}</p>
-          <p>{singleRoom.people}</p>
-          <p>${singleRoom.price}</p>
-          <Link to={"/"}>
-            <button onClick={() => handleDelete(singleRoom.id)}>
-              Cancel Reservation
-            </button>
-          </Link>
+          <div className="room-confirm__details">
+            <p>{singleRoom.company}</p>
+            <p className="room-confirm__details--light">{singleRoom.address}</p>
+            <p className="room-confirm__details--light">{singleRoom.people}</p>
+            <p>${singleRoom.price}</p>
+            <Link to={"/"}>
+              <button
+                onClick={() => handleDelete(singleRoom.id)}
+                className="room-confirm__btn"
+              >
+                Cancel Reservation
+              </button>
+            </Link>
+          </div>
         </div>
         <Footer />
       </>

@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../firebase";
 import PaymentModal from "../../components/Modals/PaymentModal/PaymentModal";
+import { FaCcVisa, FaCcMastercard } from "react-icons/fa";
 import "./Payment.scss";
 
 function Payment() {
@@ -53,10 +54,10 @@ function Payment() {
                 alt="room-image"
               />
               <h2 className="room-confirm__title">Room Details</h2>
-              <p>{singleRoom.company}</p>
-              <p>{singleRoom.address}</p>
-              <p>{singleRoom.people}</p>
-              <p>${singleRoom.price}</p>
+              <p className="room-confirm__details">{singleRoom.company}</p>
+              <p className="room-confirm__details">{singleRoom.address}</p>
+              <p className="room-confirm__details">{singleRoom.people}</p>
+              <p className="room-confirm__details">${singleRoom.price}/Hr</p>
             </div>
             <div className="pay-details">
               <h2 className="pay-details__header">Payment Details</h2>
@@ -74,14 +75,34 @@ function Payment() {
                       name="emailAddress"
                     />
                   </label>
-                  <label className="credit-container__label">
-                    Card Detail
+                  <label className="credit-container__label--credit">
+                    Card Number
+                    <FaCcVisa className="credit-container__label--visa" />
+                    <FaCcMastercard />
                     <input
-                      className="credit-container__field"
+                      className="credit-container__field--number"
                       type="text"
                       name="creditCard"
                     />
                   </label>
+                  <div className="credit-container__expiry">
+                    <label className="credit-container__label">
+                      CCV
+                      <input
+                        className="credit-container__field"
+                        type="text"
+                        name="CCV"
+                      />
+                    </label>
+                    <label className="credit-container__label">
+                      Expiry
+                      <input
+                        className="credit-container__field"
+                        type="text"
+                        name="expiry"
+                      />
+                    </label>
+                  </div>
                   <label className="credit-container__label">
                     Card Holder
                     <input
@@ -101,7 +122,7 @@ function Payment() {
                 </div>
                 <p>Total</p>
                 <Link to={`/yourReservation/${singleRoom.id}`}>
-                  <button>Pay $</button>
+                  <button className="credit-container__payment">Pay $</button>
                 </Link>
               </form>
               <button
