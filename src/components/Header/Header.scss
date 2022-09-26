@@ -18,16 +18,25 @@
     
 
     &__logo{
+        
+        position: absolute;
+        left: 10%;
+        top: 3%;
+
+      @include tablet{
+       position:relative;
         padding-left: 2rem;
         padding-top: 1.5rem;
         padding-bottom: 1rem;
-
+      }
         @include desktop{
             padding-left: 12rem;
         }
     }
 
     &__nav{
+
+        display: none;
 
         @include tablet{
             display: flex;

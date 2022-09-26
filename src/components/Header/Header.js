@@ -3,6 +3,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import OrangeLogo from "../../assets/logo/logo-orange.svg";
+import Hamburger from "../Hamburger/Hamburger";
 
 function Header() {
   const { logout } = useAuth();
@@ -23,6 +24,7 @@ function Header() {
 
   return (
     <div className="header">
+      <Hamburger />
       <Link to={"/"}>
         <div>
           <img className="header__logo" src={OrangeLogo} alt="orange-logo" />
