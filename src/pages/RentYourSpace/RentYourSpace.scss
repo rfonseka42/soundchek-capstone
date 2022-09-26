@@ -34,6 +34,29 @@
     }
 }
 
+.upload-image{
+    padding-top: 1rem;
+    @include tablet{
+        padding-top: 2rem;
+    }
+}
+.upload-label{
+    font-family: "Open sans";
+    font-size: .875rem;
+    padding-left: 1.5rem;
+
+    @include tablet{
+        padding-left: 4rem;
+        
+    }
+
+    &__input{
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+    }
+   
+}
+
 .room-container{
     background-color: $background;
     padding-bottom: 2rem;
