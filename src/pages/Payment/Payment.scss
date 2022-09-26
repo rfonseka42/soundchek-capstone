@@ -54,21 +54,17 @@
         display: flex;
         flex-direction: column;
         height: 20vh;
-        
-       
-        
-    
-        
+     
     }
 
     &__img{
         
-        min-width: 100%;
+       width: 100%;
         // border-radius: 10px;
         padding-right: 1rem;
 
         @include tablet{
-            margin-inline-start: -3.5rem;
+           margin-left: -1.5rem;
           
            
         }
@@ -85,7 +81,7 @@
         @include tablet{
             margin-left: -1.5rem;
             margin-top: -5rem;
-            padding-top: 4rem;
+            padding-top: 6.5rem;
         }
 
         @include desktop{
@@ -96,12 +92,11 @@
     &__details{
         @include tablet{
             margin-left: -1.5rem;
-            padding-top: .5rem;
-           
+        
         }
 
         @include desktop{
-            padding-left: 15.5rem;
+            padding-left: 10rem;
             
         }
     }

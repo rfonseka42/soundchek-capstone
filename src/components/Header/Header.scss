@@ -8,6 +8,13 @@
     align-items: center;
     background-color: $background;
     justify-content: space-between;
+
+    &__link{
+        text-decoration: none;
+    }
+    &__link:visited{
+        color: $main-copy;
+    }
     
 
     &__logo{

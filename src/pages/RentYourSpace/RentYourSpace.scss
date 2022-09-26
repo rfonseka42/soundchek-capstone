@@ -1,17 +1,97 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/breakpoints" as *;
 
-.rent{
+.page-title{
+    font-size: 1.5rem;
+    color: $main-copy;
+    text-align: center;
+    background-color: $background;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 1.5rem;
 
-    padding-left: 2rem;
-    padding-right: 2rem;
+    @include desktop{
+        font-size: 2rem;
+    }
+
+    &__subheader{
+        font-family: "Open sans";
+        color: white;
+        background-color: $background;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 2rem 2rem 2rem;
+
+        @include tablet{
+           padding: 0 8rem 3rem 8rem;
+            text-align: center;
+        }
+
+        @include desktop{
+           padding-left: 29rem;
+           padding-right: 29rem;
+        }
+    }
+}
+
+.room-container{
+    background-color: $background;
     padding-bottom: 2rem;
+}
+
+.roomRent{
+    background-color: $main-copy;
+    margin: 0 1.5rem 0 1.5rem;
+    border-radius: 10px;
+
+    @include desktop{
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
+
+}
+
+.rent{
+    padding: 1rem 1.5rem 0 1.5rem;
+
+    @include tablet{
+       padding: 2rem 4rem 0 4rem;
+    }
 
     &__label{
         display: flex;
         flex-direction: column;
-        padding-bottom: 1.5rem;
+        font-family: "Open sans";
+        font-size: .875rem;
+
+       
+    }
+
+    &__field{
+        margin-bottom: 1.5rem;
+        width: 95%;
+        padding: .5rem;
+        border: none;
+        border-bottom: 1px solid $button-hover;
+    }
+
+    &__btn{
+        width: 10rem;
+        height: 3rem;
+        border-radius: 10px;
+        margin-left: 1.5rem;
+        margin-bottom: 2rem;
+        border: none;
+        background-color: $button;
+        color: $main-copy;
+        font-family: 'Open Sans';
+        cursor: pointer;
+
+        @include tablet{
+            margin-left: 0;
+        }
 
     }
     
 }
+

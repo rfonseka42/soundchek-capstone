@@ -78,10 +78,15 @@ function RentYourSpace() {
   return (
     <>
       <Header />
-      <h1>Rent your space</h1>
 
-      <form onSubmit={createRoom}>
-        {/* <div className="upload-image">
+      <h1 className="page-title">Rent your space!</h1>
+      <p className="page-title__subheader">
+        So, you're ready to rent out your garage, attic or basement to aspiring
+        bands? Simply enter your info below to create a new listing.
+      </p>
+      <div className="room-container">
+        <form className="roomRent" onSubmit={createRoom}>
+          {/* <div className="upload-image">
           <label className="upload-image__label">Choose Image</label>
           <input
             required
@@ -92,73 +97,68 @@ function RentYourSpace() {
           />
           <button onClick={uploadImage}>Upload Image</button>
         </div> */}
-        <div className="rent">
-          <label className="rent__label">Company Name</label>
-          <input
-            className="rent__field"
-            type="text"
-            placeholder="Company Name"
-            onChange={(event) => {
-              setNewCompany(event.target.value);
-            }}
-          ></input>
-          <label className="rent__label">Address</label>
+          <div className="rent">
+            <label className="rent__label">Company Name</label>
+            <input
+              className="rent__field"
+              type="text"
+              onChange={(event) => {
+                setNewCompany(event.target.value);
+              }}
+            ></input>
+            <label className="rent__label">Address</label>
 
-          <input
-            className="rent__field"
-            type="text"
-            placeholder="Address"
-            onChange={(event) => {
-              setNewAddress(event.target.value);
-            }}
-          ></input>
-          <label className="rent__label"> Name of Your Room</label>
+            <input
+              className="rent__field"
+              type="text"
+              onChange={(event) => {
+                setNewAddress(event.target.value);
+              }}
+            ></input>
+            <label className="rent__label"> Name of Your Room</label>
 
-          <input
-            className="rent__field"
-            type="text"
-            placeholder="Room name"
-            onChange={(event) => {
-              setNewName(event.target.value);
-            }}
-          ></input>
-          <label className="rent__label">
-            {" "}
-            Description - What does your space look like?
-          </label>
+            <input
+              className="rent__field"
+              type="text"
+              onChange={(event) => {
+                setNewName(event.target.value);
+              }}
+            ></input>
+            <label className="rent__label">
+              {" "}
+              Description - What does your space look like?
+            </label>
 
-          <input
-            className="rent__field"
-            type="text"
-            placeholder="Description"
-            onChange={(event) => {
-              setNewDescription(event.target.value);
-            }}
-          ></input>
-          <label className="rent__label"> Number of People</label>
+            <input
+              className="rent__field"
+              type="text"
+              onChange={(event) => {
+                setNewDescription(event.target.value);
+              }}
+            ></input>
+            <label className="rent__label"> Number of People</label>
 
-          <input
-            className="rent__field"
-            type="text"
-            placeholder="People"
-            onChange={(event) => {
-              setNewPeople(event.target.value);
-            }}
-          ></input>
-          <label className="rent__label">Price per Hour</label>
+            <input
+              className="rent__field"
+              type="text"
+              onChange={(event) => {
+                setNewPeople(event.target.value);
+              }}
+            ></input>
+            <label className="rent__label">Price per Hour</label>
 
-          <input
-            className="rent__field"
-            type="number"
-            placeholder="Price"
-            onChange={(event) => {
-              setNewPrice(event.target.value);
-            }}
-          ></input>
+            <input
+              className="rent__field"
+              type="number"
+              onChange={(event) => {
+                setNewPrice(event.target.value);
+              }}
+            ></input>
 
-          <button className="submit-btn">Create Rental</button>
-        </div>
-      </form>
+            <button className="rent__btn">Create Rental</button>
+          </div>
+        </form>
+      </div>
       <Footer />
     </>
   );

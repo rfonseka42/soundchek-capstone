@@ -3,10 +3,14 @@ import Footer from "../../components/Footer/Footer";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
+import BookingModal from "../../components/Modals/BookingModal/BookingModal";
 import { db } from "../../firebase";
+
 import "./Reservations.scss";
 
 function Reservations() {
+  const [modalState, setModalState] = useState(false);
+
   const [rooms, setRooms] = useState([]);
   const [singleRoom, setSingleRoom] = useState([]);
   let { id } = useParams();
@@ -72,13 +76,17 @@ function Reservations() {
             <p>${singleRoom.price}</p>
             <Link to={"/"}>
               <button
-                onClick={() => handleDelete(singleRoom.id)}
-                className="space-confirm__btn"
+                onClick={() => {
+                  setModalState(true);
+                  handleDelete(singleRoom.id);
+                }}
+                className="space-confirm__btn open-modal"
               >
                 Cancel Reservation
               </button>
             </Link>
           </div>
+          {modalState && <BookingModal setOpenModal={setModalState} />}
         </div>
         <Footer />
       </>
