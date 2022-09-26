@@ -62,7 +62,13 @@
 }
 
 .card-top{
-    
+    @include tablet{
+        position: relative;
+        margin-top: 22rem;
+        margin-bottom: 3rem;
+    }
+  
+
     &__outline{
         width: 90%;
         height: 36vh;
@@ -78,15 +84,13 @@
 
         @include tablet{
             width: 100%;
-            position: relative;
+            position: absolute;
             left: .5rem;
-            top: .5rem;
-        
         }
 
         @include desktop{
             height: 40vh;
-            top: 1.25rem;
+            top: .25rem;
 
         }
 
@@ -103,6 +107,7 @@
 
         @include tablet{
             margin-top: -13.5rem;
+          
         }
 
         @include desktop{
