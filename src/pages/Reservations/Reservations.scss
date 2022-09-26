@@ -28,20 +28,23 @@
     }
 }
 
-.room-confirm{
+.space-confirm{
 
     background-color: $background;
     font-family: "Open sans";
     color: $main-copy;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     @include tablet{
         display: flex;
         justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     &__img{
         width: 100%;
-       
 
         @include tablet{
             width: 50%;
@@ -58,8 +61,9 @@
     &__details{
 
         @include tablet{
-            padding-right: 10rem;
-            margin-top: -.75rem;
+            padding-right: 8rem;
+            padding-left: 2rem;
+            margin-top: -1rem;
         }
 
         @include desktop{

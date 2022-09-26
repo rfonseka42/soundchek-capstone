@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import RoomDetails from "./pages/RoomDetails/RoomDetails";
 import Payment from "./pages/Payment/Payment";
 import Reservations from "./pages/Reservations/Reservations";
+import RentYourSpace from "./pages/RentYourSpace/RentYourSpace";
 
 function App() {
   return (
@@ -49,6 +50,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <Reservations />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            exact
+            path="/rentYourSpace/"
+            element={
+              <ProtectedRoute>
+                <RentYourSpace />
               </ProtectedRoute>
             }
           />

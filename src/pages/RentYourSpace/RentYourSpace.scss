@@ -1,0 +1,17 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.rent{
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+
+    &__label{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+
+    }
+    
+}

@@ -31,7 +31,9 @@ function Header() {
 
       <nav className="header__nav">
         <ul className="header__list">
-          <li>Rent Your Space</li>
+          <Link to="/rentYourSpace">
+            <li>Rent Your Space</li>
+          </Link>
           <Link to="/yourReservation/:id" className="header__book">
             <li>Bookings</li>
           </Link>

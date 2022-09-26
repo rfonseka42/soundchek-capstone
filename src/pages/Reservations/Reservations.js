@@ -57,21 +57,23 @@ function Reservations() {
         <Header />
         <h2 className="reservations">Your Reservations</h2>
 
-        <div className="room-confirm">
+        <div className="space-confirm">
           <img
-            className="room-confirm__img"
+            className="space-confirm__img"
             src={singleRoom.imgUrl}
             alt="room-image"
           />
-          <div className="room-confirm__details">
+          <div className="space-confirm__details">
             <p>{singleRoom.company}</p>
-            <p className="room-confirm__details--light">{singleRoom.address}</p>
-            <p className="room-confirm__details--light">{singleRoom.people}</p>
+            <p className="space-confirm__details--light">
+              {singleRoom.address}
+            </p>
+            <p className="space-confirm__details--light">{singleRoom.people}</p>
             <p>${singleRoom.price}</p>
             <Link to={"/"}>
               <button
                 onClick={() => handleDelete(singleRoom.id)}
-                className="room-confirm__btn"
+                className="space-confirm__btn"
               >
                 Cancel Reservation
               </button>
