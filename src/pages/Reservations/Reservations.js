@@ -45,6 +45,10 @@ function Reservations() {
     }
   };
 
+  const handleModalClick = () => {
+    setModalState(true);
+  };
+
   if (!singleRoom) {
     return (
       <>
@@ -72,19 +76,21 @@ function Reservations() {
             <p className="space__details--light">{singleRoom.address}</p>
             <p className="space__details--light">{singleRoom.people}</p>
             <p>${singleRoom.price}</p>
-            <Link to={"/"} className="space__details-link">
-              <button
-                onClick={() => {
-                  setModalState(true);
-                  handleDelete(singleRoom.id);
-                }}
-                className="space__btn open-modal"
-              >
-                Cancel Reservation
-              </button>
-            </Link>
+
+            <button
+              onClick={handleModalClick}
+              className="space__btn open-modal"
+            >
+              Cancel Reservation
+            </button>
           </div>
-          {modalState && <BookingModal setOpenModal={setModalState} />}
+          {modalState && (
+            <BookingModal
+              setOpenModal={setModalState}
+              id={singleRoom.id}
+              handleDelete={handleDelete}
+            />
+          )}
         </div>
         <Footer />
       </>
