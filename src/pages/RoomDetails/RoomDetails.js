@@ -11,6 +11,8 @@ function RoomDetails() {
   const [singleRoom, setSingleRoom] = useState([]);
   let { id } = useParams();
 
+  const [value, onChange] = useState(new Date());
+
   useEffect(() => {
     console.log("triggered");
     const rehearsalRoomsCollectionRef = collection(db, "rehearsalRooms");
@@ -67,7 +69,35 @@ function RoomDetails() {
           </div>
           <div className="room-right">
             <p className="room-right__description">{singleRoom.description}</p>
-            <p className="room-right__time">Time Picker</p>
+            <div className="room-right__time">
+              <div className="room-right__calendar">
+                <label className="room-right__label">Date</label>
+                <input
+                  required
+                  className="room-right__date"
+                  type="date"
+                  name="date"
+                />
+              </div>
+              <div className="room-right__calendar">
+                <label className="room-right__label">Start Time</label>
+                <input
+                  required
+                  className="room-right__start"
+                  type="time"
+                  name="date"
+                />
+              </div>
+              <div className="room-right__calendar">
+                <label className="room-right__label">End Time</label>
+                <input
+                  required
+                  className="room-right__end"
+                  type="time"
+                  name="date"
+                />
+              </div>
+            </div>
             <div className="room-right__cta">
               <Link
                 to={`/Payment/${singleRoom.id}`}

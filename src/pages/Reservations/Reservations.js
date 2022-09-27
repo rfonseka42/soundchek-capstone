@@ -61,26 +61,24 @@ function Reservations() {
         <Header />
         <h2 className="reservations">Your Reservations</h2>
 
-        <div className="space-confirm">
+        <div className="space">
           <img
-            className="space-confirm__img"
+            className="space__img"
             src={singleRoom.imgUrl}
             alt="room-image"
           />
-          <div className="space-confirm__details">
+          <div className="space__details">
             <p>{singleRoom.company}</p>
-            <p className="space-confirm__details--light">
-              {singleRoom.address}
-            </p>
-            <p className="space-confirm__details--light">{singleRoom.people}</p>
+            <p className="space__details--light">{singleRoom.address}</p>
+            <p className="space__details--light">{singleRoom.people}</p>
             <p>${singleRoom.price}</p>
-            <Link to={"/"}>
+            <Link to={"/"} className="space__details-link">
               <button
                 onClick={() => {
                   setModalState(true);
                   handleDelete(singleRoom.id);
                 }}
-                className="space-confirm__btn open-modal"
+                className="space__btn open-modal"
               >
                 Cancel Reservation
               </button>

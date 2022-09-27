@@ -120,7 +120,7 @@ function Payment() {
                     />
                   </label>
                 </div>
-                <p>Total</p>
+                <p className="credit-total">Total: $30</p>
                 <Link to={`/yourReservation/${singleRoom.id}`}>
                   <button className="credit-container__payment">Pay $</button>
                 </Link>

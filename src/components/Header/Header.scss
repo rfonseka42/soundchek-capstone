@@ -15,6 +15,10 @@
     &__link:visited{
         color: $main-copy;
     }
+
+    &__link:hover{
+        color: $button;
+    }
     
 
 &__logo-link{
@@ -42,6 +46,8 @@
 
         margin-left: -9rem;
         font-size: .8125rem;
+    
+      
 
         @include tablet{
             font-size: 1rem;
@@ -64,6 +70,7 @@
         padding-right: 1rem;
         padding-top: .75rem;
         white-space: nowrap;
+        
        
 
         @include tablet{
@@ -72,6 +79,7 @@
             gap: 4rem;
             padding-right: 5.5rem;
             padding-top: 0;
+            font-weight: 700;
            
          }
 
@@ -82,10 +90,8 @@
          }
         }
 
-        &__book{
-            text-decoration: none;
-            color: $main-copy;
-        }
+      
+
 
         &__btn{
             width: 4rem;
@@ -124,5 +130,7 @@
         }
 
     }
+
+
 
    

@@ -34,7 +34,7 @@ function Header() {
           <Link className="header__link" to="/rentYourSpace">
             <li>Rent Your Space</li>
           </Link>
-          <Link to="/yourReservation/:id" className="header__book">
+          <Link to="/yourReservation/:id" className="header__link">
             <li>Bookings</li>
           </Link>
         </ul>

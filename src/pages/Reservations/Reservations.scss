@@ -28,7 +28,7 @@
     }
 }
 
-.space-confirm{
+.space{
 
     background-color: $background;
     font-family: "Open sans";
@@ -74,7 +74,13 @@
         &--light{
             font-weight: 400;
         }
+
     }
+
+    &-link{
+        text-decoration: none;
+    }
+   
 
     &__btn{
         width: 11rem;
@@ -86,6 +92,12 @@
             font-family: 'Open Sans';
             cursor: pointer;
             margin-bottom: 2rem;
+            margin-left: 3rem;
+
+            @include desktop{
+                margin-left: 0;
+            }
+           
     }
 
     &__btn:hover{

@@ -233,10 +233,33 @@
     border: none;
     background-color: $main-copy;
     margin-top: 2rem;
-    margin-left: 5rem;
+    margin-left: 6.5rem;
+    border: none;
+    background-color: $background;
+    color: $main-copy;
+    text-decoration: underline;
+    cursor: pointer;
+
+    @include tablet{
+        margin-left: 7rem;
+    }
+
 
     @include desktop{
-        margin-left: 2.25rem;
+        margin-left: 12rem;
+    }
+}
+
+.open-modal:hover{
+    color: $button;
+}
+
+.credit-total{
+    font-weight: 700;
+    margin-top: 0rem;
+
+    @include desktop{
+        margin-left: -8.5rem;
     }
 }
 
