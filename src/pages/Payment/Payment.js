@@ -49,7 +49,7 @@ function Payment() {
           <div className="pay-container">
             <div className="room-confirm">
               <img
-                className="room-confirm__img"
+                className="room-confirm__picture"
                 src={singleRoom.imgUrl}
                 alt="room-image"
               />

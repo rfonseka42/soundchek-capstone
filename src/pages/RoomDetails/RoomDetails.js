@@ -11,8 +11,6 @@ function RoomDetails() {
   const [singleRoom, setSingleRoom] = useState([]);
   let { id } = useParams();
 
-  const [value, onChange] = useState(new Date());
-
   useEffect(() => {
     console.log("triggered");
     const rehearsalRoomsCollectionRef = collection(db, "rehearsalRooms");

@@ -3,7 +3,7 @@ import { db, storage } from "../../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { v4 } from "uuid";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { Link } from "react-router-dom";
+
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import RentModal from "../../components/Modals/RentModal/RentModal";

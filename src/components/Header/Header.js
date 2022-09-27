@@ -3,12 +3,11 @@ import { useAuth } from "../../contexts/AuthContext";
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import OrangeLogo from "../../assets/logo/logo-orange.svg";
-// import Hamburger from "../Hamburger/Hamburger";
 
 function Header() {
   const { logout } = useAuth();
   const [error, setError] = useState("");
-  const [open, setOpen] = useState(false);
+
   const navigate = useNavigate();
 
   async function handleLogout() {
@@ -24,7 +23,6 @@ function Header() {
 
   return (
     <div className="header">
-      {/* <Hamburger /> */}
       <Link className="header__logo-link" to={"/"}>
         <img className="header__logo" src={OrangeLogo} alt="orange-logo" />
       </Link>
