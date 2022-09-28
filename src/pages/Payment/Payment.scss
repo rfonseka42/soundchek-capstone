@@ -7,6 +7,15 @@
         width: 100%;
     }
 
+    @include desktop{
+        padding-right: 3rem;
+    }
+
+    @include wide{
+        
+        padding-top: 3rem;
+    }
+
      
     &__title{
         color: $main-copy;
@@ -33,6 +42,8 @@
         justify-content: space-between;
         gap: 1.5rem;
         padding-left: 2rem;
+        max-width: 1920px;
+        margin: 0 auto;
       
     }
 
@@ -119,6 +130,8 @@
       }
       
     }
+
+   
 }
 
 .credit-container{

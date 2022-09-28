@@ -6,13 +6,10 @@
 
     padding-bottom: 2rem;
     
-
-
     @include tablet{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
   
-       
     }
 
     @include desktop{
@@ -21,6 +18,8 @@
     
     }
 
+  
+   
 }
 
 

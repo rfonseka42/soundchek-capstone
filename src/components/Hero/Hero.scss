@@ -54,7 +54,12 @@
 
         @include desktop{
          width: 30rem;
+         padding-top: 2rem;
     
+        }
+
+        @include wide{
+           width: 35rem;
         }
     }
 }

@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import BookingModal from "../../components/Modals/BookingModal/BookingModal";
 import { db } from "../../firebase";

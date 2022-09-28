@@ -105,9 +105,9 @@ function RoomDetails() {
                   Book
                 </button>
               </Link>
-              <a className="room-right__cta room-right__cta--home" href="/">
+              <Link to="/" className="room-right__cta room-right__cta--home">
                 Find another room
-              </a>
+              </Link>
             </div>
           </div>
         </div>

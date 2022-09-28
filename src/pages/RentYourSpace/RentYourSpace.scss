@@ -32,6 +32,11 @@
            padding-left: 29rem;
            padding-right: 29rem;
         }
+
+        @include wide{
+            padding-left: 40rem;
+            padding-right: 40rem;
+        }
     }
 }
 
@@ -71,6 +76,11 @@
     @include desktop{
         margin-left: 12rem;
         margin-right: 12rem;
+    }
+
+    @include wide{
+        margin-left: 30rem;
+        margin-right: 30rem;
     }
 
 }

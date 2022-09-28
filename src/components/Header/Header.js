@@ -23,24 +23,33 @@ function Header() {
 
   return (
     <div className="header">
-      <Link className="header__logo-link" to={"/"}>
-        <img className="header__logo" src={OrangeLogo} alt="orange-logo" />
-      </Link>
+      <div className="header__logo">
+        <Link className="header__logo-link" to={"/"}>
+          <img
+            className="header__logo-img"
+            src={OrangeLogo}
+            alt="orange-logo"
+          />
+        </Link>
+      </div>
 
       <nav className="header__nav">
-        <ul className="header__list">
+        <div className="header__list">
           <Link className="header__link" to="/rentYourSpace">
-            <li>Rent Your Space</li>
+            Rent Your Space
           </Link>
           <Link to="/yourReservation/:id" className="header__link">
-            <li>Bookings</li>
+            Bookings
           </Link>
-        </ul>
+        </div>
+      </nav>
+
+      <div className="header__logout">
         {error && <p>{error}</p>}
         <button onClick={handleLogout} className="header__btn">
           Log Out
         </button>
-      </nav>
+      </div>
     </div>
   );
 
