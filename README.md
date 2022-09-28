@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+SoundChek
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SoundChek is a website to help bands and other musicians book rehearsal spaces more effectively. Users can log in to the website, book and pre-pay for rooms quickly. This eliminates the need to call or email rehearsal spaces as the current common practice for booking a rehearsal space.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+**Client:**
+React.js
+Sass
+V4 UUId
 
-### `npm start`
+**Server:**
+Firebase Database
+Firebase Storage
+Firebase Authentication
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Sign Up and Login to view rehearsal rooms around the city available for rent
+- Click to view more details of a room
+- Select a date and time
+- Pre-pay for your room and view reservation
+- Delete your reservation
+- Users who want to offer their location for rent can also add a space to the homepage
 
-### `npm test`
+## Environment Variables
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run this project, you will need to add the following environment variables to your .env file.
+You must create an account in Firebase to get the values for these keys, as well as create your own database with collections and documents to run the project.
 
-### `npm run build`
+REACT_APP_FIREBASE_API_KEY
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+REACT_APP_FIREBASE_AUTH_DOMAIN
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+REACT_APP_FIREBASE_PROJECT_ID
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+REACT_APP_FIREBASE_STORAGE_BUCKET
 
-### `npm run eject`
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+REACT_APP_FIREBASE_APP_ID
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Run Locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clone the repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+ git clone git@github.com:rfonseka42/soundchek-capstone.git
+```
 
-## Learn More
+Go to the project directory and run npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  cd soundchek-capstone
+  npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Install dependencies
 
-### Code Splitting
+```bash
+  npm install sass react-router-dom uuidv4
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Start the server
 
-### Analyzing the Bundle Size
+```bash
+  npm run start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Acknowledgements
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you so much to the amazing Teaching Assistants and Educators at BrainStation, Toronto for your support!
