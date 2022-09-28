@@ -129,6 +129,7 @@ function Payment() {
                 className="open-modal"
                 onClick={() => {
                   setModalState(true);
+                  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
                 }}
               >
                 Cancel

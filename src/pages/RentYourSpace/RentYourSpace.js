@@ -144,6 +144,7 @@ function RentYourSpace() {
               className="rent__btn"
               onClick={() => {
                 setModalState(true);
+                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               }}
             >
               Create Rental

@@ -41,71 +41,68 @@ function RoomDetails() {
       <>
         <Header />
         <div className="room">
-          <div className="room-left">
-            <div className="room-details">
+          <div className="left">
+            <div className="left__details">
               {singleRoom && (
-                <h2 className="room-details__name">{singleRoom.company}</h2>
+                <h2 className="left__details left__details--heading">
+                  {singleRoom.company}
+                </h2>
               )}
-              <div className="room-details__other">
+              <div className="left__location">
                 <div>
                   <p>{singleRoom.address}</p>
                   <p>{singleRoom.people}</p>
                 </div>
 
-                <p className="room-details__other room-details__other--bold">
+                <p className="left__location left__location--bold">
                   ${singleRoom.price}/Hr
                 </p>
               </div>
             </div>
-            <div className="room-image">
+            <div className="left__room">
               <img
-                className="room-image__room"
+                className="left__image"
                 src={singleRoom.imgUrl}
                 alt="drummer"
               />
+              <p className="left__description">{singleRoom.description}</p>
             </div>
           </div>
-          <div className="room-right">
-            <p className="room-right__description">{singleRoom.description}</p>
-            <div className="room-right__time">
-              <div className="room-right__calendar">
-                <label className="room-right__label">Date</label>
+          <div className="right">
+            <div className="right__time">
+              <div className="right__calendar">
+                <label className="right__label">Date</label>
                 <input
                   required
-                  className="room-right__date"
+                  className="right__date"
                   type="date"
                   name="date"
                 />
               </div>
-              <div className="room-right__calendar">
-                <label className="room-right__label">Start Time</label>
+              <div className="right__calendar">
+                <label className="right__label">Start Time</label>
                 <input
                   required
-                  className="room-right__start"
+                  className="right__start"
                   type="time"
                   name="date"
                 />
               </div>
-              <div className="room-right__calendar">
-                <label className="room-right__label">End Time</label>
+              <div className="right__calendar">
+                <label className="right__label">End Time</label>
                 <input
                   required
-                  className="room-right__end"
+                  className="right__end"
                   type="time"
                   name="date"
                 />
               </div>
             </div>
-            <div className="room-right__cta">
-              <Link
-                to={`/Payment/${singleRoom.id}`}
-                className="room-right__btn"
-              >
-                <button className="room-right__cta room-right__cta--book">
-                  Book
-                </button>
+            <div className="right__cta">
+              <Link to={`/Payment/${singleRoom.id}`} className="right__btn">
+                <button className="right__cta right__cta--book">Book</button>
               </Link>
-              <Link to="/" className="room-right__cta room-right__cta--home">
+              <Link to="/" className="right__cta right__cta--home">
                 Find another room
               </Link>
             </div>
