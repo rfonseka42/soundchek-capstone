@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import logoWhite from "../../assets/logo/logo-white.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import television from "../../assets/images/tv.jpg";
 import "./Signup.scss";
 
@@ -13,6 +13,8 @@ function Signup() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const navigate = useNavigate();
+
   async function handleSubmit(event) {
     event.preventDefault();
 
@@ -23,6 +25,7 @@ function Signup() {
     try {
       setError("");
       setLoading(true);
+      navigate("/login");
 
       await signup(emailRef.current.value, passwordRef.current.value);
     } catch {
