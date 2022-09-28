@@ -114,6 +114,10 @@
     font-family: 'Open Sans';
     cursor: pointer;
    }
+
+   &__btn:hover{
+    background-color: $button-hover;
+   }
    
 }
 
