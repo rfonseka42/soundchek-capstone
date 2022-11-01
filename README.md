@@ -12,10 +12,13 @@ This first screenshot shows the user signup page. Once signed up, the user then 
 
 <img width="1436" alt="Screen Shot 2022-11-01 at 11 25 52 AM" src="https://user-images.githubusercontent.com/87579758/199271275-66cecd7d-0ab5-4625-8e01-fd0f18ec09a7.png">
 
-Once on the home page, the user can view different rooms available for rent. Each card lists details about each room, including price.
+Once on the Home Page, the user can view different rooms available for rent. Each card lists details about each room, including price.
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/87579758/199275076-cac22a4b-3ecd-4cdf-a417-f4b77669cdd9.gif)
 
+When user selects a room, they are taken to a Room Details Page, where they can view further details of the selected room and pick a date and time to rent.
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/87579758/199276303-80474dc6-22c5-4308-89c4-a38d0603b28e.gif)
 
 
 
