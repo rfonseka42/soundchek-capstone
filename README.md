@@ -18,7 +18,7 @@ Once on the Home Page, the user can view different rooms available for rent. Eac
 
 When user selects a room, they are taken to a Room Details Page, where they can view further details of the selected room and pick a date and time to rent.
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/87579758/199276303-80474dc6-22c5-4308-89c4-a38d0603b28e.gif)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/87579758/199277234-022846ae-9aec-410d-ac31-52bddf93bff6.gif)
 
 
 
