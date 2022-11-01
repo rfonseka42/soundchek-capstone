@@ -20,11 +20,13 @@ When user selects a room, they are taken to a Room Details Page, where they can 
 
 <img width="1433" alt="Screen Shot 2022-11-01 at 11 54 27 AM" src="https://user-images.githubusercontent.com/87579758/199277954-58e780ea-bf8e-4729-81ff-faa8bb117fb9.png">
 
-After confirming the rehearsal time, the user can then go ahead an pre-pay for their room, which will then appear on their Bookings Page.
+After confirming the rehearsal time, the user can then go ahead an pre-pay for their room, which will then appear on their Bookings Page. Rooms can also be cancelled at any time.
 
-https://user-images.githubusercontent.com/87579758/199279218-c94a76a4-e627-4bf7-93ea-2afcacfec8ca.mp4
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/87579758/199279504-a478c485-e4b1-4778-8c26-2bc7d663b55b.gif)
 
+<img width="1431" alt="Screen Shot 2022-11-01 at 12 02 14 PM" src="https://user-images.githubusercontent.com/87579758/199279706-9e1fb674-df39-4ea8-850a-96d1f7b163d7.png">
 
+<img width="1330" alt="Screen Shot 2022-11-01 at 12 02 55 PM" src="https://user-images.githubusercontent.com/87579758/199279852-dce2a894-9510-4198-8bfa-299b6fc2b6e2.png">
 
 
 ## Tech Stack
