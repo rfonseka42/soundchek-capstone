@@ -14,7 +14,7 @@ This first screenshot shows the user signup page. Once signed up, the user then 
 
 Once on the home page, the user can view different rooms available for rent. Each card lists details about each room, including price.
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/87579758/199274265-5095fc6d-6825-44c4-b9f6-0d0ee59fb274.gif)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/87579758/199275076-cac22a4b-3ecd-4cdf-a417-f4b77669cdd9.gif)
 
 
 
