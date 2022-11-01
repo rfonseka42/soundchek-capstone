@@ -2,6 +2,10 @@ SoundChek
 
 SoundChek is a website to help bands and other musicians book rehearsal spaces more effectively. Users can log in to the website, book and pre-pay for rooms quickly. This eliminates the need to call or email rehearsal spaces as the current common practice for booking a rehearsal space.
 
+You can watch a live demo of my project here:
+
+https://www.loom.com/share/3b5ffd92b2e645ffbfc3f1efb67f4940
+
 ## Tech Stack
 
 **Client:**
