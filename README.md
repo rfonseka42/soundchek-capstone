@@ -20,6 +20,10 @@ When user selects a room, they are taken to a Room Details Page, where they can 
 
 <img width="1433" alt="Screen Shot 2022-11-01 at 11 54 27 AM" src="https://user-images.githubusercontent.com/87579758/199277954-58e780ea-bf8e-4729-81ff-faa8bb117fb9.png">
 
+After confirming the rehearsal time, the user can then go ahead an pre-pay for their room, which will then appear on their Bookings Page.
+
+https://user-images.githubusercontent.com/87579758/199279218-c94a76a4-e627-4bf7-93ea-2afcacfec8ca.mp4
+
 
 
 
